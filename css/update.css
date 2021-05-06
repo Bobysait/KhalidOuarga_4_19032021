@@ -1,0 +1,22 @@
+#bloc-8 {
+	padding : 1rem;
+}
+
+.flex {
+	display : flex;
+	justify-content: space-between;
+}
+
+
+footer ul {
+	list-style: none;
+}
+
+footer .social, footer ul {
+	width : 40%;
+}
+
+footer >.flex {
+	margin : auto;
+	max-width : 900px;
+}

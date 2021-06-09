@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow:
+Sitemap: https://Bobysait.github.io/KhalidOuarga_4_19032021/sitemap.xml

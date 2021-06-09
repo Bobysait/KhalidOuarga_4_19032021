@@ -4,22 +4,25 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="description" content="Agence SEO située à Lyon, La Chouette Agence est specialisée dans le réferencement naturel de votre site web">
-<!--		<meta name="description" content="seo, google, site web, site internet, agence design paris, agence design, Agence web à paris, stratégie web, web design, illustrations, design de site web, site web, site internet, site"> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<meta name="robots" content="index, follow">
+		
 		<link rel="shortcut icon" type="image/png" href="favicon.jpg">
 		
-		<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="./style.css">
 		<link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="./css/et-line.css">
 		<link rel="stylesheet" type="text/css" href="./css/update.css">
 		
-		 
-		<script src="./js/jquery-2.1.0.js" defer></script>
-		<script src="./js/bootstrap.js" defer></script>
+		<script src="./js/jquery-3.6.0.min.js" defer></script>
+		<script src="./js/bootstrap.min.js" defer></script>
+		<script src="./js/jqBootstrapValidation.js" defer></script>
+		<script src="./js/formHandler.js" defer></script>
 		<script src="./js/blocs.js" defer></script>
 		<script src="./js/jquery.touchSwipe.js" defer></script>
-		<script src="./js/gmaps.js" defer></script>
+		<!-- <script src="./js/gmaps.min.js" defer></script> -->
+		
 
 		<title>La Chouette Agence - La Lyonnaise des SEO</title>
 
@@ -33,7 +36,7 @@
 				gtag('config', 'G-664LZLN949');
 			</script>
 		<!-- Analytics END -->
-			
+
 	</head>
 
 	<body>
@@ -44,35 +47,34 @@
 			<!-- bloc-0 -->
 			<header class="bloc bgc-white l-bloc " id="bloc-0">
 				<div class="container bloc-sm">
-					<nav class="navbar row">
-						<div class="navbar-header">
-							<a class="navbar-brand" href="index.html"><img src="img/la-chouette-agence.png" alt="paris web design logo agence web meilleure agence" height="40" /></a>
-							<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
-								<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-							</button>
-						</div>
-						<div class="collapse navbar-collapse navbar-1 special-dropdown-nav">
-							<ul class="site-navigation nav navbar-nav">
-								<li>
-									<a href="index.html">Accueil</a>
+
+					<nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+						<a class="navbar-brand" href="index.html"><img src="img/la-chouette-agence.png" alt="paris web design logo agence web meilleure agence" height="40" /></a>
+						<button class="navbar-toggler" id="nav-toggle" type="button" data-toggle="collapse" data-target=".navbar-1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse navbar-1" id="navbarNav">
+							<ul class="navbar-nav">
+								<li class="nav-item active">
+									<a class="nav-link" href="#bloc-1-hero">Accueil <span class="sr-only">(current)</span></a>
 								</li>
 								<li>
-									<a href="#bloc-1-hero">Nous</a>
+									<a class="nav-link" href="#bloc-2-services">Nos Services</a>
 								</li>
 								<li>
-									<a href="#bloc-2-services">Services</a>
+									<a class="nav-link" href="#bloc-3-what-i-do">Notre offre</a>
 								</li>
 								<li>
-									<a href="#bloc-3-what-i-do">what-i-do</a>
+									<a class="nav-link" href="#bloc-4-portfolio">Nos Realisations</a>
 								</li>
 								<li>
-									<a href="#bloc-4-portfolio">Realisations</a>
-								</li>
-								<li>
-									<a href="./page2.html">Contact</a>
+									<a class="nav-link" href="#bloc-5-cta">Contact</a>
 								</li>
 							</ul>
 						</div>
+
 					</nav>
 				</div>
 			</header>
@@ -83,14 +85,14 @@
 				<div class="bloc bgc-dark-slate-blue bg-banniere d-bloc bg-t-edge bloc-bg-texture texture-paper b-parallax" id="bloc-1-hero">
 					<div class="container bloc-lg">
 						<div class="row tight-width-whitespace">
-							<div class="col-sm-12">
-								<img src="./img/logo.png" class="center-block image-resize-mode" width="100" alt="Logo de La chouette agence, agence web Lyon" />
-								<h1 class="text-center hero-bloc-text tc-white ">
+							<div class="col-sm-12 text-center">
+								<img src="./img/logo.png" class="image-resize-mode" width="100" alt="Logo de La chouette agence, agence web Lyon" />
+								<h1 class="hero-bloc-text tc-white ">
 									La chouette agence <br> L'Agence Web Design Lyonnaise
 								</h1>
-								<div class="text-center">
-									<a href="./page2.html" class="btn btn-lg btn-clean btn-rd cta-hero btn-atomic-tangerine" id="cta-hero">Contact</a>
-								</div>
+								<button class="btn btn-atomic-tangerine btn-clean btn-rd btn-lg cta-hero"
+										onclick="gotoContact()">Contact</button>
+								<!-- <a href="./page2.html" class="btn btn-lg btn-clean btn-rd cta-hero btn-atomic-tangerine" id="cta-hero">Contact</a> -->
 							</div>
 						</div>
 					</div>
@@ -102,7 +104,7 @@
 					<div class="container bloc-md">
 						<div class="row tight-width-whitespace">
 							<div class="col-sm-12 text-center">
-								<h2 class="mg-md">La chouette agence est une agence de web design à <strong>Lyon</strong> qui aide les entreprises à devenir attractives et visibles sur Internet.</h2> <!-- <img alt="agence web, agence web paris, web design paris, stratégie web" src="img/title.png" /> -->
+								<h2 class="mg-md">La chouette agence est une agence de web design à <em>Lyon</em> qui aide les entreprises à devenir attractives et visibles sur Internet.</h2> <!-- <img alt="agence web, agence web paris, web design paris, stratégie web" src="img/title.png" /> -->
 							</div>
 						</div>
 						<div class="row voffset-lg med-width-whitespace">
@@ -141,9 +143,9 @@
 							</div>
 						</div>
 						<div class="row voffset-lg voffset">
-							<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+							<div class="col-xs-12 col-md-8 mx-auto text-center">
 								<blockquote>"La chouette agence est une excellente agence web ! Les web designers ont réussi à capturer l'essence de notre entreprise et à l'intégrer à notre site. Cela nous a aidé à doubler nos ventes en ligne à Lyon."
-									<footer>Maxime Guibard, PDG de <cite title="A Vos fourchettes">A vos fourchettes</cite></footer>
+									<footer class="blockquote__author">Maxime Guibard, PDG de <cite class="blockquote__source" title="A Vos fourchettes">A vos fourchettes</cite></footer>
 								</blockquote>
 								<!-- <img alt="agence web, agence web paris, web design paris, stratégie web" src="img/citation.png" /> -->
 							</div>
@@ -161,7 +163,7 @@
 									Nous souhaitons aider les entreprises de la région Lyonnaise à se développer et à connaître le succès. Nous travaillons pour aider les entreprises locales à attirer de nouveaux clients .<br>
 								</h2>
 								<p class="text-center white">
-									Nous aimons collaborer avec des entrepreneurs créatifs et des entreprises locale, qu’elles aient besoin de créer un site de A à Z ou de donner un coup de jeune à leur site. Que vous ayez besoin d’une identité visuelle complète ou d’une refonte de votre site, n’hésitez pas à nous contacter. Nous travaillerons ensemble pour créer des sites beau et bien structurés, qui seront facilement trouvable sur les moteurs de recherche. <br><br><a class="ltc-white bold-link" href="page2.html">Contactez notre équipe</a><br>
+									Nous aimons collaborer avec des entrepreneurs créatifs et des entreprises locales, qu’elles aient besoin de créer un site de A à Z ou de donner un coup de jeune à leur site. Que vous ayez besoin d’une identité visuelle complète ou d’une refonte de votre site, n’hésitez pas à <a class="ltc-white bold-link" href="#bloc-6-contact" onclick="gotoContact()">nous contacter</a>. Nous travaillerons ensemble pour créer des sites beau et bien structurés, qui seront facilement trouvable sur les moteurs de recherche.
 								</p>
 							</div>
 						</div>
@@ -178,95 +180,253 @@
 							</div>
 						</div>
 						<div class="row tight-width-whitespace portfolio-row">
-							<div class="col-sm-6">
-								<a href="#" data-lightbox="img/1.jpg" data-gallery-id="gallery-1" data-caption="Refonte d'un site web pour un journal local" data-frame="snapshot-lb"><img src="img/1.jpg" alt="paris web design logo agence web meilleure agence et refonte site web journal" class="img-responsive portfolio-thumb" /></a>
-								<h3 class="mg-md text-center">
-									Refonte d'un site web pour un journal local
-								</h3>
-								<p class="text-center">
-									Nous avons créé une nouvelle identité visuelle pour un journal lyonnais.
-								</p>
-							</div>
-							<div class="col-sm-6">
-								<a href="#" data-lightbox="img/2.jpg" data-gallery-id="gallery-1" data-caption="Création d'un site web pour photographes" data-frame="snapshot-lb"><img src="img/2.jpg" class="img-responsive portfolio-thumb" alt="paris web design logo agence web meilleure agence, Création d'un site web pour photographes" /></a>
-								<h3 class="mg-md text-center">
-									Création d'un site web pour photographes
-								</h3>
-								<p class="text-center">
-									Nous avons conçu la plateforme idéale pour laisser place aux clichés des photographes.
-								</p>
-							</div>
+							<figure class="col-sm-6">
+								<a href="#" data-lightbox="img/1.jpg" data-gallery-id="gallery-1" data-caption="Refonte d'un site web pour un journal local" data-frame="snapshot-lb">
+									<img src="img/1.jpg" alt="refonte site web journal" class="img-fluid img-thumbnail" />
+								</a>
+								<figcaption class="mg-md text-center">
+									<h3>Refonte d'un site web pour un journal local</h3>
+									<p class="text-center">
+										Nous avons créé une nouvelle identité visuelle pour un journal lyonnais.
+									</p>
+								</figcaption>
+							</figure>
+							<figure class="col-sm-6">
+								<a href="#" data-lightbox="img/2.jpg" data-gallery-id="gallery-1" data-caption="Création d'un site web pour photographes" data-frame="snapshot-lb">
+									<img src="img/2.jpg" class="img-fluid img-thumbnail" alt="Création d'un site web pour photographes" />
+								</a>
+								<figcaption class="mg-md text-center">
+									<h3>
+										Création d'un site web pour photographes
+									</h3>
+									<p class="text-center">
+										Nous avons conçu la plateforme idéale pour laisser place aux clichés des photographes.
+									</p>
+								</figcaption>
+							</figure>
 						</div>
+
 						<div class="row tight-width-whitespace portfolio-row">
-							<div class="col-sm-6">
-								<a href="#" data-lightbox="img/3.jpg" data-gallery-id="gallery-1" data-caption="Création d'un site internet pour un voyageur" data-frame="snapshot-lb"><img src="img/3.jpg" class="img-responsive portfolio-thumb" alt="paris web design logo agence web meilleure agence, Création d'un site web pour voyageur"/></a>
-								<h3 class="mg-md text-center">
-									Création d'un site internet pour un voyageur
-								</h3>
-								<p class="text-center">
-									Nous avons élaboré un site internet et des illustrations pour sublimer les vidéos et les articles de ce voyageur.
-								</p>
-							</div>
-							<div class="col-sm-6">
-								<a href="#" data-lightbox="img/4.jpg" data-gallery-id="gallery-1" data-caption="Conception d'un site pour une agence de mariage" data-frame="snapshot-lb"><img src="img/4.jpg" class="img-responsive portfolio-thumb" alt="paris web design logo agence web meilleure agence, Création d'un site web pour agence de mariage" /></a>
-								<h3 class="mg-md text-center">
-									Conception d'un site pour une agence de mariage
-								</h3>
-								<p class="text-center">
-									Nous avons travaillé avec cette agence pour créer un site internet permettant la présentation détaillée de leurs prestations.
-								</p>
-							</div>
+							<figure class="col-sm-6">
+								<a href="#" data-lightbox="img/3.jpg" data-gallery-id="gallery-1" data-caption="Création d'un site internet pour un voyageur" data-frame="snapshot-lb">
+									<img src="img/3.jpg" class="img-fluid img-thumbnail" alt="Création d'un site web pour voyageur"/>
+								</a>
+								<figcaption class="mg-md text-center">
+									<h3>
+										Création d'un site internet pour un voyageur
+									</h3>
+									<p class="text-center">
+										Nous avons élaboré un site internet et des illustrations pour sublimer les vidéos et les articles de ce voyageur.
+									</p>
+								</figcaption>
+							</figure>
+							<figure class="col-sm-6">
+								<a href="#" data-lightbox="img/4.jpg" data-gallery-id="gallery-1" data-caption="Conception d'un site pour une agence de mariage" data-frame="snapshot-lb">
+									<img src="img/4.jpg" class="img-fluid img-thumbnail" alt="Création d'un site web pour agence de mariage" />
+								</a>
+								<figcaption class="mg-md text-center">
+									<h3>
+										Conception d'un site pour une agence de mariage
+									</h3>
+									<p class="text-center">
+										Nous avons travaillé avec cette agence pour créer un site internet permettant la présentation détaillée de leurs prestations.
+									</p>
+								</figcaption>
+							</figure>
 						</div>
 					</div>
 				</div>
 				<!-- bloc-4-portfolio END -->
 
 				<!-- bloc-5-cta -->
-				<div class="bloc bgc-dark-slate-blue bg-banniere d-bloc bloc-bg-texture texture-paper bg-t-edge b-parallax" id="bloc-5-cta">
+				<div class="bloc bgc-dark-slate-blue bg-banniere d-bloc bg-t-edge bloc-bg-texture texture-paper" id="bloc-5-cta">
 					<div class="container bloc-lg">
-						<div class="row">
-							<h2 class="mg-md text-center tc-white">
-								Prêt pour redonner vie à votre projet ?<br>Contactez notre équipe&#160;!
-							</h2>
-							<div class="col-sm-12 text-center">
-								<a href="page2.html" class="btn btn-atomic-tangerine btn-clean btn-rd btn-lg cta-hero">Contact</a>
+						<div class="row tight-width-whitespace">
+							<div class="col-sm-12">
+									<h2 class="mg-md text-center tc-white">
+									Prêt pour redonner vie à votre projet ?<br>Contactez notre équipe&#160;!
+								</h2>
+								<div class="col-sm-12 text-center">
+									<button class="btn btn-atomic-tangerine btn-clean btn-rd btn-lg cta-hero" onclick="gotoContact()">Contact</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- bloc-5-cta END -->
 				
+				<!-- bloc-6 -->
+				<div class="bloc bg-dots-bg bg-repeat bgc-atomic-tangerine-2 d-bloc bloc-bg-texture texture-paper bg-presentation b-parallax" id="bloc-6-contact">
+					
+					<div class="container bloc-lg">
+						<div class="row tight-width-whitespace black-background">
+							<div class="col-sm-12">
+								<h2 class="text-center hero-bloc-text tc-white">
+									Parlons web design&#160;!
+								</h2>
+								<p class="text-center mg-lg tc-white tight-width-whitespace">
+									Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
+									Parlez-nous de votre projet en complétant le formulaire ci-dessous.
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="bloc bgc-white l-bloc" id="bloc-7-formulaire">
+						<div class="container bloc-lg">
+							<div class="row">
+								<div class="col-lg-6">
+									<form id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
+										<div class="form-group">
+											<label>
+												Nom
+												<input id="name" class="form-control" required />
+											</label>
+										</div>
+										<div class="form-group">
+											<label>
+												Adresse email
+												<input id="email" class="form-control" type="email" required />
+											</label>
+										</div>
+										<div class="form-group">
+											<label>
+												Comment nous avez-vous connu ?
+												<input class="form-control" type="email" required id="input_504" />
+											</label>
+										</div>
+										<div class="form-group">
+											<label>
+												Brief de votre projet (Ajoutez autant de détails que nécessaire)<br>
+												<textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
+											</label>
+										</div> 
+										<button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit">
+											Envoyer
+										</button>
+									</form>
+								</div>
+								<div class="col-lg-6 adress">
+									<adress>
+										<p><span>Email : </span><a href="mailto:contact@lachouetteagence.com">contact@lachouetteagence.com</a></p>
+										<p><span>Adresse : </span>2 place Sathonay 69001 Lyon</p>
+									</adress>
+									<p class="horaires"><span>Horaires : </span>Ouvert du lundi au vendredi - de 9h à 18h</p>
+									<!-- insert map here ! [optionnal] -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- bloc-7 END -->
+
 			</main>
 
 			<!-- Footer - bloc-8 -->
 			<footer class="bloc bgc-atomic-tangerine d-bloc" id="bloc-8">
 
-				<p class="text-center white">
+				<p class="text-center">
 					La chouette agence - Agence web basée à Lyon.<br>
 				</p>
 
-				<div class="flex">
+				<div class="social flex">
 
-					<div class="social flex">
+					<a class="social" href="https://twitter.com"><span class="fa fa-twitter icon-md"></span><br><span class="icon-title">twitter</span></a>
+				
+					<a class="social" href="https://facebook.com"><span class="fa fa-facebook icon-md"></span><br><span class="icon-title">facebook</span></a>
+				
+					<a class="social" href="https://dribble.com"><span class="fa fa-dribbble icon-md"></span><br><span class="icon-title">dribble</span></a>
+				
+					<a class="social" href="https://instagram.com"><span class="fa fa-instagram icon-md"></span><br><span class="icon-title">instagram</span></a>
+					
+				</div>
 
-						<a class="social" href="index.html"><span class="fa fa-twitter icon-md"></span></a>
-					
-						<a class="social" href="index.html"><span class="fa fa-facebook icon-md"></span></a>
-					
-						<a class="social" href="index.html"><span class="fa fa-dribbble icon-md"></span></a>
-					
-						<a class="social" href="index.html"><span class="fa fa-instagram icon-md"></span></a>
-					
+				<div class="social flex">
+					<a href="#" data-toggle="modal" data-target="#Box-CGU" class="cgu">Mentions légales</a>
+				</div>
+
+				<!-- CGU Window -->
+				<div class="modal fade" id="Box-CGU" tabindex="-1" role="dialog" aria-labelledby="Box-CGU-Label" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3 class="modal-title" id="Box-CGU-Label">Mentions légales</h3>
+								<button type="button btn-atomic-tangerine btn-clean btn-rd btn-lg" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+
+							<div class="modal-body">
+								<h4>Éditeur du Site :</h4>
+								<p>[à remplir] Numéro de SIRET : [à remplir]</p>
+								<h4>Responsable éditorial :</h4>
+								<p>[à remplir]
+									2 place Sathonay, 69001 Lyon
+									Téléphone : [à remplir]
+									Email : contact@lachouetteagence.com
+									Site Web : [à remplir]
+									Hébergement : contact@lachouetteagence.com
+								</p>
+
+								<h4>Développement :</h4>
+								<p>La Chouette Agence
+									Adresse : 2 place Sathonay, 69001 Lyon
+									Site Web : [à remplir]
+								</p>
+								
+								<h4>Conditions d’utilisation :</h4>
+								<p>Ce site ([à remplir : site-url]) est proposé en différents langages web (HTML, HTML5, Javascript, CSS, etc…) pour un meilleur confort d’utilisation et un graphisme plus agréable.</p>
+								<p>Nous vous recommandons de recourir à des navigateurs modernes comme Internet explorer, Safari, Firefox, Google Chrome, etc…</p>
+								<p>L’agence web [à remplir : site-name] met en œuvre tous les moyens dont elle dispose, pour assurer une information fiable et une mise à jour fiable de ses sites internet.</p>
+								<p>Toutefois, des erreurs ou omissions peuvent survenir. L’internaute devra donc s’assurer de l’exactitude des informations auprès de [à remplir : site-name] , et signaler toutes modifications du site qu’il jugerait utile. [à remplir : site-name] n’est en aucun cas responsable de l’utilisation faite de ces informations, et de tout préjudice direct ou indirect pouvant en découler.</p>
+								
+								<h4>Cookies :</h4>
+								<p>Le site [à remplir : site-url] peut-être amené à vous demander l’acceptation des cookies pour des besoins de statistiques et d’affichage. Un cookie est une information déposée sur votre disque dur par le serveur du site que vous visitez.</p>
+								<p>Il contient plusieurs données qui sont stockées sur votre ordinateur dans un simple fichier texte auquel un serveur accède pour lire et enregistrer des informations . Certaines parties de ce site ne peuvent être fonctionnelles sans l’acceptation de cookies.</p>
+								
+								<h4>Liens hypertextes :</h4>
+								<p>Les sites internet de peuvent offrir des liens vers d’autres sites internet ou d’autres ressources disponibles sur Internet. [à remplir : site-owner] ne dispose d’aucun moyen pour contrôler les sites en connexion avec ses sites internet.</p>
+								<p>[à remplir : site-name] ne répond pas de la disponibilité de tels sites et sources externes, ni ne la garantit. Elle ne peut être tenue pour responsable de tout dommage, de quelque nature que ce soit, résultant du contenu de ces sites ou sources externes, et notamment des informations, produits ou services qu’ils proposent, ou de tout usage qui peut être fait de ces éléments. Les risques liés à cette utilisation incombent pleinement à l’internaute, qui doit se conformer à leurs conditions d’utilisation.</p>
+								<p>Les utilisateurs, les abonnés et les visiteurs des sites internet  ne peuvent pas mettre en place un hyperlien en direction de ce site sans l’autorisation expresse et préalable de [à remplir : site-owner].</p>
+								<p>Dans l’hypothèse où un utilisateur ou visiteur souhaiterait mettre en place un hyperlien en direction d’un des sites internet de [à remplir : site-owner], il lui appartiendra d’adresser un email accessible sur le site afin de formuler sa demande de mise en place d’un hyperlien.</p>
+								<p>La [à remplir : site-owner] se réserve le droit d’accepter ou de refuser un hyperlien sans avoir à en justifier sa décision.</p>
+								
+								<h4>Services fournis :</h4>
+								<p>L’ensemble des activités de la société ainsi que ses informations sont présentés sur notre site [à remplir : site-url].</p>
+								<p>[à remplir : site-owner] s’efforce de fournir sur le site [à remplir : site-url] des informations aussi précises que possible. Les renseignements figurant sur le site [à remplir : site-url] ne sont pas exhaustifs et les photos non contractuelles.</p>
+								<p>Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne. Par ailleurs, tous les informations indiquées sur le site [à remplir : site-url] sont données à titre indicatif, et sont susceptibles de changer ou d’évoluer sans préavis.</p>
+								
+								<h4>Limitation contractuelles sur les données :</h4>
+								<p>Les informations contenues sur ce site sont aussi précises que possible et le site remis à jour à différentes périodes de l’année, mais peut toutefois contenir des inexactitudes ou des omissions.</p>
+								<p>Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par courriel, à l’adresse [à remplir : site-mail], en décrivant le problème de la manière la plus précise possible (page posant problème, type d’ordinateur et de navigateur utilisé, …).</p>
+								<p>Tout contenu téléchargé se fait aux risques et périls de l’utilisateur et sous sa seule responsabilité. En conséquence, ne saurait être tenu responsable d’un quelconque dommage subi par l’ordinateur de l’utilisateur ou d’une quelconque perte de données consécutives au téléchargement.</p>
+								<p>De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour.</p>
+								<p>Les liens hypertextes mis en place dans le cadre du présent site internet en direction d’autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité de [à remplir : site-owner].</p>
+
+								<h4>Propriété intellectuelle :</h4>
+								<p>Tout le contenu du présent site [à remplir : site-url], incluant, de façon non limitative, les graphismes, images, textes, vidéos, animations, sons, logos, gifs et icônes ainsi que leur mise en forme sont la propriété exclusive de la société à l’exception des marques, logos ou contenus appartenant à d’autres sociétés partenaires ou auteurs.</p>
+								<p>Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l’accord exprès par écrit de [à remplir : site-owner]. Cette représentation ou reproduction, par quelque procédé que ce soit, constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle. Le non-respect de cette interdiction constitue une contrefaçon pouvant engager la responsabilité civile et pénale du contrefacteur. En outre, les propriétaires des Contenus copiés pourraient intenter une action en justice à votre encontre.</p>
+
+								<h4>Déclaration à la CNIL :</h4>
+								<p>Conformément à la loi 78-17 du 6 janvier 1978 (modifiée par la loi 2004-801 du 6 août 2004 relative à la protection des personnes physiques à l’égard des traitements de données à caractère personnel) relative à l’informatique, aux fichiers et aux libertés, ce site a fait l’objet d’une déclaration 1656629 auprès de la Commission nationale de l’informatique et des libertés (www.cnil.fr).</p>
+
+								<h4>Litiges :</h4>
+								<p>Les présentes conditions du site [à remplir : site-url] sont régies par les lois françaises et toute contestation ou litiges qui pourraient naître de l’interprétation ou de l’exécution de celles-ci seront de la compétence exclusive des tribunaux dont dépend le siège social de la société. La langue de référence, pour le règlement de contentieux éventuels, est le français.</p>
+
+								<h4>Données personnelles :</h4>
+								<p>De manière générale, vous n’êtes pas tenu de nous communiquer vos données personnelles lorsque vous visitez notre site Internet [à remplir : site-url]</p>
+								<p>Cependant, ce principe comporte certaines exceptions. En effet, pour certains services proposés par notre site, vous pouvez être amenés à nous communiquer certaines données telles que : votre nom, votre fonction, le nom de votre société, votre adresse électronique, et votre numéro de téléphone. Tel est le cas lorsque vous remplissez le formulaire qui vous est proposé en ligne, dans la rubrique « contact ».</p>
+								<p>Dans tous les cas, vous pouvez refuser de fournir vos données personnelles. Dans ce cas, vous ne pourrez pas utiliser les services du site, notamment celui de solliciter des renseignements sur notre société, ou de recevoir les lettres d’information.</p>
+								<p>Enfin, nous pouvons collecter de manière automatique certaines informations vous concernant lors d’une simple navigation sur notre site internet, notamment : des informations concernant l’utilisation de notre site, comme les zones que vous visitez et les services auxquels vous accédez, votre adresse IP, le type de votre navigateur, vos temps d’accès.</p>
+								<p>De telles informations sont utilisées exclusivement à des fins de statistiques internes, de manière à améliorer la qualité des services qui vous sont proposés. Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.</p>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-atomic-tangerine btn-clean btn-rd btn-lg btn-primary" data-dismiss="modal">Fermer</button>
+							</div>
+						</div>
 					</div>
-
-					<ul>
-						<li>Partenaires</li>
-						<li><a href="voiture.com">voiture.com</a></li>
-						<li><a href="pizza.com">pizza.com</a></li>
-						<li><a href="matoiture.com">matoiture.com</a></li>
-						<li><a href="immobilierseo.com">immobilierseo.com</a></li>
-					</ul>
-
 				</div>
 
 			</footer>

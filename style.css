@@ -1,6 +1,3 @@
-html {
-	scroll-behavior: smooth;
-}
 
 body {
     margin: 0;
@@ -136,7 +133,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+	color: rgba(255, 255, 255, .6);
 }
 
 .d-bloc .a-btn:hover,
@@ -153,17 +150,17 @@ a:hover {
 .d-bloc h5 a:hover,
 .d-bloc h6 a:hover,
 .d-bloc p a:hover {
-    color: #fff;
+    color: #FFF;
 }
 
 .d-bloc .navbar-toggle .icon-bar {
-    background: #fff;
+    background: #FFF;
 }
 
 .d-bloc .btn-wire,
 .d-bloc .btn-wire:hover {
-    color: #fff;
-    border-color: #fff;
+    color: #FFF;
+    border-color: #FFF;
 }
 
 .d-bloc .panel {
@@ -299,6 +296,7 @@ a:hover {
     height: auto;
     padding: 3px 15px;
     font-size: 25px;
+    font-weight: normal;
     font-weight: 600;
     line-height: 44px;
 }
@@ -337,7 +335,7 @@ a:hover {
 .nav > li a:hover,
 .nav > li a:focus {
     background: transparent;
-	transform: scale(1.05);
+	color: #000;
 }
 
 .navbar-toggle {
@@ -539,27 +537,23 @@ a[data-lightbox] {
     text-align: center;
 }
 
+
 a[data-lightbox]:hover::before {
-	display : flex;				/* fix "+" centering */
-	justify-content: center;	/* fix "+" centering */
-	align-items: center;		/* fix "+" centering */
-	align-content: center;		/* fix "+" centering */
-	
     content: "+";
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
     font-size: 32px;
     width: 50px;
     height: 50px;
+    margin-left: -25px;
     border-radius: 50%;
     background: rgba(0, 0, 0, .6);
     color: #FFF;
     font-weight: 100;
     z-index: 1;
     position: absolute;
-	left:50%; /* fix "+" centering */
     top: 50%;
-    transform: translate(-50%,-50%); /* fix "+" centering */
-    -webkit-transform: translate(-50%,-50%);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 
 a[data-lightbox]:hover img {
@@ -576,7 +570,13 @@ a[data-lightbox]:hover img {
 #lightbox-modal .modal-dialog {
     width: 90%;
     max-width: 900px;
-    margin: 0 auto 0;
+	display : flex;
+	align-items: center;
+	position : fixed;
+	top: 0;
+	bottom : 0;
+	left : 0;
+	right : 0;
 }
 
 #lightbox-modal .modal-dialog img {
@@ -584,14 +584,18 @@ a[data-lightbox]:hover img {
     margin: 0 auto;
 }
 
-.lightbox-caption {
-    padding: 20px;
-    color: #FFF;
+#lightbox-modal .modal-body {
+	width : 100%;
+	margin : auto;
+	display : flex;
+}
+
+#lightbox-modal .lightbox-caption {
+	margin : 0 1rem 1rem 1rem;
+	padding: 1rem;
+    color: #FFF!important;
     background: rgba(0, 0, 0, .5);
-    position: absolute;
-    left: 15px;
-    right: 15px;
-    bottom: 5px;
+	text-align: center;
 }
 
 .close-lightbox {
@@ -637,10 +641,6 @@ a[data-lightbox]:hover img {
     left: 25px;
 }
 
-.snapshot-lb .modal-body {
-    padding-bottom: 45px;
-}
-
 .snapshot-lb .lightbox-caption {
     padding: 0;
     color: rgba(0, 0, 0, .5);
@@ -652,7 +652,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a {
     font-weight: 400;
     color: #575757!important;
 }
-
+a:hover{
+	color: #000!important;
+}
 .container {
     max-width: 1000px;
 }
@@ -664,6 +666,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a {
 .hero-bloc-text-sub {
     font-size: 36px;
 }
+
 
 .statement-bloc-text {
     line-height: 26px;
@@ -779,7 +782,7 @@ h4 {
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFF!important;
+    color: #000!important;
 }
 
 .btn-atomic-tangerine:hover {
@@ -824,7 +827,7 @@ h4 {
     background-image: url("img/image-de-presentation.jpg");
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
     .bloc {
         padding-left: 20px;
         padding-right: 20px;
@@ -835,7 +838,7 @@ h4 {
     }
 }
 
-@media (max-width: 992px) and (min-width: 768px) {
+@media (max-width: 991px) and (min-width: 768px) {
     .navbar .nav {
         max-width: 80%
     }
@@ -844,7 +847,7 @@ h4 {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -944,6 +947,7 @@ h4 {
         left: -1px;
         right: -1px;
     }
+
     .navbar-collapse {
         padding: 0;
         overflow-x: hidden;

@@ -69,13 +69,15 @@ body {
 	blockquote {
 		font-size: 19px;
 		color : #000;
+		border-left : 2px solid #ccc;
+		padding-left : 1rem;
 	}
 
 	.blockquote__author, .blockquote__source {
 		font-size: 17px;
 		color : #000;
+		margin-top : 1rem;
 	}
-
 
 /* bloc 4 */
 	/* fix for "+" centering */
@@ -97,6 +99,11 @@ body {
 		width : 100%;
 		height: auto;
 	  }
+
+	#lightbox-image {
+		width : 300px;
+		height : 300px;
+	}
 	
 /* bloc 6 : contact form */
 	#bloc-6-contact {

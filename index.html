@@ -6,15 +6,24 @@
 		<meta name="description" content="Agence SEO située à Lyon, La Chouette Agence est specialisée dans le réferencement naturel de votre site web">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 		<meta name="robots" content="index, follow">
+		<meta name="theme-color" content="#F3976C">
 		
+		
+		<link rel="manifest" href="/manifest.json">
+
 		<link rel="shortcut icon" type="image/png" href="favicon.png">
 		
-		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="./style.css">
-		<link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
-		<link rel="stylesheet" type="text/css" href="./css/et-line.css">
-		<link rel="stylesheet" type="text/css" href="./css/update.css">
+		<link rel="preload" href="./fonts/et-line.woff" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="./fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" crossorigin="anonymous" />
+
+		<link rel="preload" href="./css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<link rel="preload" href="./style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<link rel="preload" href="./css/font-awesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<link rel="preload" href="./css/et-line.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<link rel="preload" href="./css/update.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 		
+		<link rel="preload" as="image" href="img/la-chouette-agence-banniere.jpg" />
+
 		<script src="./js/jquery-3.6.0.min.js" defer></script>
 		<script src="./js/bootstrap.min.js" defer></script>
 		<script src="./js/jqBootstrapValidation.js" defer></script>
@@ -49,7 +58,7 @@
 				<div class="container bloc-sm">
 
 					<nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-						<a class="navbar-brand" href="index.html"><img src="img/la-chouette-agence.png" alt="paris web design logo agence web meilleure agence" height="40" /></a>
+						<a class="navbar-brand" href="index.html"><img src="img/la-chouette-agence.png" alt="paris web design logo agence web meilleure agence" width="215" height="40" /></a>
 						<button class="navbar-toggler" id="nav-toggle" type="button" data-toggle="collapse" data-target=".navbar-1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="navbar-toggler-icon"></span>
@@ -86,7 +95,7 @@
 					<div class="container bloc-lg">
 						<div class="row tight-width-whitespace">
 							<div class="col-sm-12 text-center">
-								<img src="./img/logo.png" class="image-resize-mode" width="100" alt="Logo de La chouette agence, agence web Lyon" />
+								<img src="./img/logo.png" class="image-resize-mode" width="100" height="100" alt="Logo de La chouette agence, agence web Lyon" />
 								<h1 class="hero-bloc-text tc-white ">
 									La chouette agence <br> L'Agence Web Design Lyonnaise
 								</h1>
@@ -115,7 +124,7 @@
 								<h3 class="mg-md text-center">
 									Web design
 								</h3>
-								<p class="text-center ">
+								<p>
 									Que vous ayez un site web qui a besoin d&rsquo;un rafraîchissement ou que vous partiez de zéro, laissez-nous vous réaliser un design dont vous serez fier.
 								</p>
 							</div>
@@ -126,7 +135,7 @@
 								<h3 class="mg-md text-center">
 									&nbsp;Stratégie
 								</h3>
-								<p class="text-center ">
+								<p>
 									Plutôt que de suggérer des designs à la mode, nous travaillerons avec vous pour comprendre vos objectifs commerciaux afin de vous proposer le meilleur design possible.<br>
 								</p>
 							</div>
@@ -137,15 +146,15 @@
 								<h3 class="mg-md text-center">
 									Illustrations
 								</h3>
-								<p class="text-center ">
+								<p>
 									Un bon design n'est rien sans de bonnes illustrations. Laissez faire notre équipe de graphistes talentueux pour donner à vos pages une touche finale d'élégance.
 								</p>
 							</div>
 						</div>
 						<div class="row voffset-lg voffset">
-							<div class="col-xs-12 col-md-8 mx-auto text-center">
+							<div class="col-xs-12 col-md-8 mx-auto">
 								<blockquote>"La chouette agence est une excellente agence web ! Les web designers ont réussi à capturer l'essence de notre entreprise et à l'intégrer à notre site. Cela nous a aidé à doubler nos ventes en ligne à Lyon."
-									<footer class="blockquote__author">Maxime Guibard, PDG de <cite class="blockquote__source" title="A Vos fourchettes">A vos fourchettes</cite></footer>
+									<footer class="blockquote__author">- Maxime Guibard, PDG de <cite class="blockquote__source" title="A Vos fourchettes">A vos fourchettes</cite></footer>
 								</blockquote>
 								<!-- <img alt="agence web, agence web paris, web design paris, stratégie web" src="img/citation.png" /> -->
 							</div>
@@ -182,7 +191,7 @@
 						<div class="row tight-width-whitespace portfolio-row">
 							<figure class="col-sm-6">
 								<a href="#" data-lightbox="img/1.jpg" data-gallery-id="gallery-1" data-caption="Refonte d'un site web pour un journal local" data-frame="snapshot-lb">
-									<img src="img/1.jpg" alt="refonte site web journal" class="img-fluid img-thumbnail" />
+									<img src="img/1.jpg" alt="refonte site web journal" class="img-fluid img-thumbnail" width="300px" height="300px" />
 								</a>
 								<figcaption class="mg-md text-center">
 									<h3>Refonte d'un site web pour un journal local</h3>
@@ -193,7 +202,7 @@
 							</figure>
 							<figure class="col-sm-6">
 								<a href="#" data-lightbox="img/2.jpg" data-gallery-id="gallery-1" data-caption="Création d'un site web pour photographes" data-frame="snapshot-lb">
-									<img src="img/2.jpg" class="img-fluid img-thumbnail" alt="Création d'un site web pour photographes" />
+									<img src="img/2.jpg" class="img-fluid img-thumbnail" width="300px" height="300px" alt="Création d'un site web pour photographes" />
 								</a>
 								<figcaption class="mg-md text-center">
 									<h3>
@@ -209,7 +218,7 @@
 						<div class="row tight-width-whitespace portfolio-row">
 							<figure class="col-sm-6">
 								<a href="#" data-lightbox="img/3.jpg" data-gallery-id="gallery-1" data-caption="Création d'un site internet pour un voyageur" data-frame="snapshot-lb">
-									<img src="img/3.jpg" class="img-fluid img-thumbnail" alt="Création d'un site web pour voyageur"/>
+									<img src="img/3.jpg" class="img-fluid img-thumbnail" width="300px" height="300px" alt="Création d'un site web pour voyageur"/>
 								</a>
 								<figcaption class="mg-md text-center">
 									<h3>
@@ -222,7 +231,7 @@
 							</figure>
 							<figure class="col-sm-6">
 								<a href="#" data-lightbox="img/4.jpg" data-gallery-id="gallery-1" data-caption="Conception d'un site pour une agence de mariage" data-frame="snapshot-lb">
-									<img src="img/4.jpg" class="img-fluid img-thumbnail" alt="Création d'un site web pour agence de mariage" />
+									<img src="img/4.jpg" class="img-fluid img-thumbnail" width="300px" height="300px" alt="Création d'un site web pour agence de mariage" />
 								</a>
 								<figcaption class="mg-md text-center">
 									<h3>

@@ -1,0 +1,28 @@
+{
+	"short_name": "La Chouette Agence",
+	"name": "La Chouette Agence",
+	"icons": [
+		{
+			"src": "./img/logo.png",
+			"type": "image/png",
+			"sizes": "150x150",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "favicon.png",
+			"type": "image/png",
+			"sizes": "32x32"
+		},
+		{
+			"src":"splashscreen.png",
+			"type": "image/png",
+			"sizes": "910x512"
+		}
+	],
+	"start_url": "/index.html",
+	"background_color": "#ffffff",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#ffffff",
+	"description": ""
+  }
